@@ -1,15 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Funker disse git greine?Eller er det bare tull?</title>
-</head>
-<body>
-    <p>Dette er forandringer
-    </p>
-    <h1>Dette er forandringer</h1>
+  </head>
+  <body>
+  <input type="button" class="random-number-btn" value="Vis tilfeldig tall">
+  <p id="random-number-txt"></p>
+    <script>
+      const randomNumberBtn=document.querySelector(".random-number-btn");
+      const randomNumberTxt=document.querySelector("#random-number-txt");
+
+      randomNumberBtn.onclick = showRandomNumber;
+      function showRandomNumber(){
+        randomNumberTxt.innerHTML =generateRandomNumber();
+
+      }
+      function generateRandomNumber(){
+        let randomNumber= Math.floor(Math.random()*10);
+        return randomNumber;
+      }
     
-    
-</body>
+    </script>
+  </body>
 </html>
